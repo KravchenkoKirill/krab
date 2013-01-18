@@ -106,6 +106,7 @@ namespace Proekt1
         public override void DrawWith(Graphics g, Pen p)
         {
             g.DrawEllipse(p,C.X - r, C.Y - r, 2 * r, 2 * r);
+            g.DrawLine(p, C, P);
         }
         public override void SaveTo(StreamWriter sw)
         {
