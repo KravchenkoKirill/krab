@@ -49,6 +49,10 @@ namespace Proekt1
                 }
             }
         }
+ //   public override interface Rad
+  //  {
+    //    get {return 0}
+  //  }
     public class Line : Shape
         {
             Point C, F;  
@@ -96,17 +100,18 @@ namespace Proekt1
     {
         Point C, P;
         Pen p = new Pen(Color.Blue);
-        int r;
+      //  int r;
         public Circle(Point _C, Point _P)
         {
             C = _C;
             P = _P;
-            r = Convert.ToInt32(Math.Sqrt(Math.Pow(C.X - P.X,2) + Math.Pow(C.Y - P.Y,2)));
+           // r = Convert.ToInt32(Math.Sqrt(Math.Pow(C.X - P.X,2) + Math.Pow(C.Y - P.Y,2)));
         }
         public override void DrawWith(Graphics g, Pen p)
         {
-            g.DrawEllipse(p,C.X - r, C.Y - r, 2 * r, 2 * r);
+         // g.DrawEllipse(p,C.X - r, C.Y - r, 2 * r, 2 * r);
             g.DrawLine(p, C, P);
+            g.DrawEllipse(p, a.X - this.Rad, a.Y - this.Rad, 2 * this.Rad, 2 * this.Rad);
         }
         public override void SaveTo(StreamWriter sw)
         {
